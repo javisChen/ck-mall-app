@@ -19,6 +19,15 @@ class CommonUtils {
     return groups;
     // return Object.keys(groups).map(group => groups[group])
   }
+
+  centToYuan(cent) {
+    var num = cent;
+    num = cent * 0.01;
+    num += '';
+    var reg = num.indexOf('.') > -1 ? /(\d{1,3})(?=(?:\d{3})+\.)/g : /(\d{1,3})(?=(?:\d{3})+$)/g;
+    num = toDecimal2(num.replace(reg, '$1'));
+    return num
+  }
 }
 
 const commonUtils = new CommonUtils();

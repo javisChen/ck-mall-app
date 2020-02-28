@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from "react-native";
+import CommonStyles from "@common/CommonStyles.js";
 
 export default StyleSheet.create({
       linearGradient: {
@@ -26,10 +27,13 @@ export default StyleSheet.create({
         top: 20,
         width: 30,
         height: 30,
-        backgroundColor: '#000000',
+        // backgroundColor: '#000000',
         borderRadius: 20,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        // borderWidth: 1,
+        // borderColor: 'red'
+        zIndex: 99
       },
       headerBtnImage: {
         width: 20,

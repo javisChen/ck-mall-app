@@ -9,6 +9,29 @@ export default StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: '#eaeaea',
   },
+
+  shippingAddress: {
+    margin: 10,
+    marginBottom: 5,
+    flex: 9,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 100,
+  },
+
+  shippingAddressText: {
+    color: '#7a7a7a'
+  },
+
+  shippingAddressRightArrow: {
+    position: 'absolute',
+    right: 10,
+    width: 8,
+    height: 18,
+  },
+
   content: {
     margin: 10,
     marginBottom: 5,
@@ -17,6 +40,7 @@ export default StyleSheet.create({
     borderRadius: 10,
   },
   productItemWrapper: {
+    padding: 10
     // borderWidth: 1,
     // borderBottomWidth: 10,
     // borderBottomColor: '#eaeaea'
@@ -45,42 +69,50 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: CommonStyles.themeColor
   },
-  productOldPrice: {
-    marginLeft: 10,
+  productQuantity: {
+    fontSize: 11,
+    color: '#000000'
+  },
+  costInfo: {
+    margin: 10,
+    marginBottom: 5,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 5,
+    paddingBottom: 5
+  },
+  costInfoItem: {
+    flex: 1,
     fontSize: 12,
-    fontWeight: 'normal',
-    color: 'rgba(0,0,0,.54)',
-    textDecorationLine: 'line-through'
+    width: '100%',
+    height: 25,
+    justifyContent: 'center'
   },
-  purchaseQuantityWrapper: {
+  costInfoItemKeyWrapper: {
     position: 'absolute',
-    bottom: 2,
-    right: 2,
+    left: 10
   },
-  purchaseQuantityInputWrapper: {
-    flex: 3,
-    flexDirection: 'row',
+  costInfoItemKey: {
+    fontSize: 12,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  minus: {
-    width: 12,
-    height: 12,
+  costInfoItemValueWrapper: {
+    position: 'absolute',
+    right: 10
   },
-  plus: {
-    width: 12,
-    height: 12,
+  costInfoItemValue: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  quantityWrapper: {
-    backgroundColor: '#e6e6e6',
-    borderRadius: 5,
-    padding: 2,
-    marginLeft: 2,
-    marginRight: 2,
-    width: 40,
+  costInfoItemValueText: {
+    color: CommonStyles.themeColor
   },
-  quantity: {
-    textAlign: 'center'
+  costInfoItemText: {
+    fontSize: 12
   },
   cartBottomActionBar: {
     height: 50,
@@ -98,22 +130,13 @@ export default StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
   },
-  amountText: {
-    fontSize: 12
-  },
   amount: {
     fontSize: 14,
     color: CommonStyles.themeColor,
     fontWeight: 'bold'
   },
-  freight: {
-    fontSize: 12
-  },
-
-  expenseWrapper: {
-  },
   settleButton: {
-    marginLeft: 5,
+    marginLeft: 10,
     marginRight: 5,
     width: 100,
     borderRadius: 20

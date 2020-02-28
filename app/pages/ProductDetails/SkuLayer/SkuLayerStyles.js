@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from "react-native";
+import CommonStyles from "@common/CommonStyles.js";
 
 const {width, height} = Dimensions.get('window');
 
@@ -101,7 +102,7 @@ export default StyleSheet.create({
     textAlign: 'center'
   },
   actionBar: {
-    backgroundColor: '#ff6700',
+    backgroundColor: CommonStyles.themeColor,
     height: 40,
     borderRadius: 20
   },

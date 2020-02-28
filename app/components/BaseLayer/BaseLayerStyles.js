@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from "react-native";
+import CommonStyles from "@common/CommonStyles.js";
 
 const {width, height} = Dimensions.get('window');
 

@@ -17,6 +17,14 @@ class BaseHeader extends Component {
     this.state = {}
   }
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
+  onLeftButtonPress = () => {
+    this.props.parentProps.navigation.goBack()
+  };
+
   render() {
     return (
         <LinearGradient
@@ -24,10 +32,12 @@ class BaseHeader extends Component {
             start={{x: 0, y: 0}}
             end={{x: 1, y: 0}}
             colors={['#ffb100', '#ec8f05', '#f0780d', '#ec5f00']}>
+
           <View style={styles.wrapper}>
             {
               this.props.showLeftButton &&
               <TouchableOpacity
+                  onPress={this.onLeftButtonPress}
                   style={styles.headerBtn}
               >
                 <Image
@@ -48,6 +58,7 @@ class BaseHeader extends Component {
 BaseHeader.propTypes = {
   title: PropTypes.string.isRequired,
   showLeftButton: PropTypes.bool,
+  parentProps: PropTypes.object,
 };
 
 BaseHeader.defaultProps = {

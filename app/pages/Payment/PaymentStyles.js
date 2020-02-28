@@ -9,6 +9,7 @@ export default StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: '#eaeaea',
   },
+
   content: {
     margin: 10,
     marginBottom: 5,
@@ -17,6 +18,7 @@ export default StyleSheet.create({
     borderRadius: 10,
   },
   productItemWrapper: {
+    padding: 10
     // borderWidth: 1,
     // borderBottomWidth: 10,
     // borderBottomColor: '#eaeaea'
@@ -45,77 +47,66 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     color: CommonStyles.themeColor
   },
-  productOldPrice: {
-    marginLeft: 10,
-    fontSize: 12,
-    fontWeight: 'normal',
-    color: 'rgba(0,0,0,.54)',
-    textDecorationLine: 'line-through'
-  },
-  purchaseQuantityWrapper: {
-    position: 'absolute',
-    bottom: 2,
-    right: 2,
-  },
-  purchaseQuantityInputWrapper: {
-    flex: 3,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  minus: {
-    width: 12,
-    height: 12,
-  },
-  plus: {
-    width: 12,
-    height: 12,
-  },
-  quantityWrapper: {
-    backgroundColor: '#e6e6e6',
-    borderRadius: 5,
-    padding: 2,
-    marginLeft: 2,
-    marginRight: 2,
-    width: 40,
-  },
-  quantity: {
-    textAlign: 'center'
-  },
-  cartBottomActionBar: {
-    height: 50,
-    backgroundColor: '#ffffff',
-    justifyContent: 'center'
-  },
-  cartBottomActionBarLeft: {
-    position: 'absolute',
-    left: 0,
-  },
-  cartBottomActionBarRight: {
-    position: 'absolute',
-    right: 0,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  amountText: {
-    fontSize: 12
-  },
-  amount: {
-    fontSize: 14,
-    color: CommonStyles.themeColor,
-    fontWeight: 'bold'
-  },
-  freight: {
-    fontSize: 12
+  productQuantity: {
+    fontSize: 11,
+    color: '#000000'
   },
 
-  expenseWrapper: {
+  payWay: {
+    margin: 10,
+    marginBottom: 5,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+    paddingLeft: 10,
+    paddingRight: 10,
   },
+
+  payWayItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '100%',
+    borderBottomColor: 'rgb(245, 245, 245)',
+    borderBottomWidth: 1,
+    height: 50
+  },
+
+  amount: {
+    flexDirection: 'row',
+    justifyContent: 'center'
+  },
+
+  amountText: {
+    color: CommonStyles.themeColor,
+    fontSize: 18,
+    marginTop: 10
+  },
+
+  amountPriceText: {
+    fontSize: 28,
+    fontWeight: '400'
+  },
+
+  payWayIcon: {
+    width: 25,
+    height: 25,
+    marginRight: 10
+  },
+
+  payWayText: {
+    fontSize: 13
+  },
+
+  radioImage: {
+    width: 18,
+    height: 18,
+    position: 'absolute',
+    right: 0
+  },
+
   settleButton: {
-    marginLeft: 5,
-    marginRight: 5,
-    width: 100,
+    width: '100%',
     borderRadius: 20
   },
   settleButtonText: {
@@ -124,5 +115,11 @@ export default StyleSheet.create({
     height: 40,
     lineHeight: 40,
     borderRadius: 20
+  },
+  cartBottomActionBar: {
+    padding: 10,
+    height: 50,
+    backgroundColor: '#ffffff',
+    justifyContent: 'center'
   },
 });

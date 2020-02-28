@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from "./CategoryStyles";
+import CommonStyles from "@common/CommonStyles.js";
 
 import {
   View,
@@ -87,7 +88,7 @@ export default class Category extends Component {
     this.leftCategoryItemTextWrapperRefs[leftCategoryTextWrapper].setNativeProps({
       style: {
         borderLeftWidth: 6,
-        borderLeftColor: '#FF6700'
+        borderLeftColor: CommonStyles.themeColor
       }
     })
 

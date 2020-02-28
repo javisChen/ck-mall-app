@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from "react-native";
+import CommonStyles from "@common/CommonStyles.js";
 
 const {width, height} = Dimensions.get('window');
 
@@ -46,7 +47,7 @@ export default StyleSheet.create({
   price: {
     marginTop: 10,
     fontSize: 20,
-    color: '#FF6700'
+    color: CommonStyles.themeColor
   },
   oldPrice: {
     fontSize: 12,
@@ -119,7 +120,7 @@ export default StyleSheet.create({
     fontSize: 13
   },
   detailOptionItemActivated: {
-    color: '#FF6700',
+    color: CommonStyles.themeColor,
     fontSize: 14
   },
   detailContent: {},

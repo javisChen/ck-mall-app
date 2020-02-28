@@ -115,7 +115,7 @@ class Home extends Component {
                           <Text style={styles.subTitle}>{value.subTitle}</Text>
                           <Text style={styles.price}>¥{value.price} <Text
                               style={styles.oldPrice}>¥{value.oldPrice}</Text> </Text>
-                          <TouchableOpacity
+                          <TouchableOpacity activeOpacity={1}
                               onPress={this.onBuyNowPress}
                               style={styles.button}
                           >

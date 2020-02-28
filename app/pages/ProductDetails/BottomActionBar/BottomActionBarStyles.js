@@ -1,4 +1,5 @@
 import {StyleSheet} from "react-native";
+import CommonStyles from "@common/CommonStyles.js";
 
 export default StyleSheet.create({
   bottomActionBar: {
@@ -14,7 +15,7 @@ export default StyleSheet.create({
   },
   addToCartBtn: {
     height: 50,
-    backgroundColor: '#ff6700',
+    backgroundColor: CommonStyles.themeColor,
   },
   addToCartBtnText: {
     color: '#ffffff',

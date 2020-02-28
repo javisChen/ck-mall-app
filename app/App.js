@@ -5,6 +5,10 @@ import Cart from "./pages/Cart/Cart.js";
 import Mine from "./pages/Mine/Mine.js";
 import Category from "./pages/Category/Category.js";
 import Login from "./pages/Login/Login.js";
+import Settlement from "./pages/Settlement/Settlement.js";
+import AddressIndex from "./pages/Address/AddressIndex/AddressIndex.js";
+import AddressEdit from "./pages/Address/AddressEdit/AddressEdit.js";
+import Payment from "./pages/Payment/Payment.js";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconWithBadge from "./components/IconWithBadge";
 import {createBottomTabNavigator} from 'react-navigation-tabs';
@@ -105,15 +109,15 @@ const rootStack = createStackNavigator(
     {
       Index: {
         screen: TabNavigator,
-        navigationOptions: ({navigation, screenProps}) => {
-          return {
-            headerShown: false,
-          }
-        }
+        navigationOptions: ({navigation, screenProps}) => ({
+          headerShown: false,
+        })
       },
+      // 商品详情
       ProductDetails: {
         screen: ProductDetails,
       },
+      // 登录
       Login: {
         screen: Login,
         navigationOptions: ({navigation}) => ({
@@ -122,7 +126,35 @@ const rootStack = createStackNavigator(
           //   close: TransitionSpecs.FadeOutToBottomAndroidSpec,
           // },
         }),
-      }
+      },
+      // 结算
+      Settlement: {
+        screen: Settlement,
+        navigationOptions: ({navigation}) => ({
+          headerShown: false,
+        }),
+      },
+      // 地址管理-首页
+      AddressIndex: {
+        screen: AddressIndex,
+        navigationOptions: ({navigation}) => ({
+          headerShown: false,
+        }),
+      },
+      // 地址管理-首页
+      AddressEdit: {
+        screen: AddressEdit,
+        navigationOptions: ({navigation}) => ({
+          headerShown: false,
+        }),
+      },
+      // 支付
+      Payment: {
+        screen: Payment,
+        navigationOptions: ({navigation}) => ({
+          headerShown: false,
+        }),
+      },
     },
     {
       initialRouteName: 'Index',

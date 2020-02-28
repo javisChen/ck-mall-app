@@ -3,7 +3,6 @@ import {
   View,
   Text
 } from "react-native";
-import styles from "./SeparatorStyles";
 import PropTypes from 'prop-types';
 
 /**

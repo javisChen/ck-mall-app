@@ -42,10 +42,16 @@ export default class Cart extends Component {
     );
   };
 
+
+  toSettlement = () => {
+    console.log(123123)
+    this.props.navigation.navigate('Settlement')
+  };
+
   render() {
     return (
         <View style={styles.container}>
-          <BaseHeader title={'购物车'}/>
+          <BaseHeader parentProps={this.props} title={'购物车'}/>
 
           {/*<Swipeable*/}
           {/*    renderLeftActions={this.renderLeftActions}>*/}
@@ -92,7 +98,6 @@ export default class Cart extends Component {
                   </TouchableOpacity>
                 </Radio>
               </View>
-
 
               <View style={styles.productItemWrapper}>
                 <Radio>
@@ -187,7 +192,9 @@ export default class Cart extends Component {
                 </Text>
               </View>
 
-              <TouchableOpacity style={styles.settleButton}>
+              <TouchableOpacity
+                  onPress={this.toSettlement}
+                  style={styles.settleButton}>
                 <LinearGradient
                     style={{borderRadius: 10}}
                     start={{x: 0, y: 0}}

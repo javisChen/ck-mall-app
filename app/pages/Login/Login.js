@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import styles from "./LoginStyles";
 import {TransitionSpecs} from 'react-navigation-stack';
+import CommonStyles from "@common/CommonStyles.js";
 
 export default class Login extends Component {
 
@@ -65,7 +66,7 @@ export default class Login extends Component {
     console.log(this.state.loginParams)
     let backgroundColor = '';
     if (this.state.loginParams.account && this.state.loginParams.password) {
-      backgroundColor = '#FF6700'
+      backgroundColor = CommonStyles.themeColor
     } else {
       backgroundColor = 'rgba(255,138,0,0.47)'
     }
