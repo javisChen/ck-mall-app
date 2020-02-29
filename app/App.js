@@ -8,6 +8,8 @@ import Login from "./pages/Login/Login.js";
 import Settlement from "./pages/Settlement/Settlement.js";
 import AddressIndex from "./pages/Address/AddressIndex/AddressIndex.js";
 import AddressEdit from "./pages/Address/AddressEdit/AddressEdit.js";
+import OrderIndex from "./pages/Order/OrderIndex/OrderIndex.js";
+import OrderDetail from "./pages/Order/OrderDetail/OrderDetail.js";
 import Payment from "./pages/Payment/Payment.js";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import IconWithBadge from "./components/IconWithBadge";
@@ -148,6 +150,20 @@ const rootStack = createStackNavigator(
           headerShown: false,
         }),
       },
+      // 订单列表
+      OrderIndex: {
+        screen: OrderIndex,
+        navigationOptions: ({navigation}) => ({
+          headerShown: false,
+        }),
+      },
+      // 订单详情
+      OrderDetail: {
+        screen: OrderDetail,
+        navigationOptions: ({navigation}) => ({
+          headerShown: false,
+        }),
+      },
       // 支付
       Payment: {
         screen: Payment,
@@ -157,7 +173,7 @@ const rootStack = createStackNavigator(
       },
     },
     {
-      initialRouteName: 'Index',
+      initialRouteName: 'OrderIndex',
     }
 );
 
