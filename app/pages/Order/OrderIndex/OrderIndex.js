@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from "./OrderIndexStyles.js";
+import CommonStyles from "@common/CommonStyles.js";
 
 import {
   Text,
@@ -45,14 +46,23 @@ export default class AddressIndex extends Component {
     }
   }
   onTabPress = (index, item) => {
+    const s = `navRefsItem${index}`;
     Object.keys(this.navRefs).forEach(r => {
-      this.navRefs[index].setNativeProps({
+      this.navRefs[r].setNativeProps({
         style: {
-          backgroundColor: '#f3f3f3'
+          color: '#000'
         }
       })
     })
+    this.navRefs[s].setNativeProps({
+      style: {
+        color: CommonStyles.themeColor
+      }
+    })
   };
+
+  componentDidMount() {
+  }
 
   render() {
     return (
@@ -70,10 +80,12 @@ export default class AddressIndex extends Component {
                         key={index} style={styles.oi_tabItem}
                         onPress={this.onTabPress.bind(this, index, value)}
                         activeOpacity={1}
-                        ref={(ref) => {
-                          return this.navRefs = {...this.navRefs, [`navRefsItem${index}`]: ref};
-                        }}>
-                      <Text style={[styles.oi_tabItemText]}>{value.text}</Text>
+                        >
+                      <Text
+                          ref={(ref) => {
+                            return this.navRefs = {...this.navRefs, [`navRefsItem${index}`]: ref};
+                          }}
+                          style={[styles.oi_tabItemText]}>{value.text}</Text>
                     </TouchableOpacity>
                 )
               })
