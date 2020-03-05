@@ -18,8 +18,6 @@ import {createAppContainer} from 'react-navigation';
 import {createStackNavigator, TransitionSpecs} from 'react-navigation-stack';
 import {Image} from "react-native";
 
-
-
 const HomeIconWithBadge = (props) => {
   console.log('props', props);
   // You should pass down the badgeCount in some other ways like context, redux, mobx or event emitters.
