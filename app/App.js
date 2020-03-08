@@ -25,6 +25,7 @@ const HomeIconWithBadge = (props) => {
 };
 
 
+
 const getTabBarIcon = (navigation, focused, tintColor) => {
   const {routeName} = navigation.state;
   let IconComponent = Ionicons;
